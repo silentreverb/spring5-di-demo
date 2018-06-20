@@ -14,13 +14,12 @@ import org.springframework.stereotype.Service;
  * @author grune
  */
 @Service
+@Profile("es")
 @Primary
-@Profile("en")
-public class PrimaryGreetingService implements GreetingService {
-
+public class PrimarySpanishGreetingService implements GreetingService {
+    
     @Override
     public String sayGreeting() {
-        return "Hello - Primary Greeting service";
+        return "Servicio de Saludo Primario";
     }
-    
 }
