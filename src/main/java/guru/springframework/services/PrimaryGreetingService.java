@@ -5,6 +5,7 @@
  */
 package guru.springframework.services;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,11 +13,12 @@ import org.springframework.stereotype.Service;
  * @author grune
  */
 @Service
-public class GreetingServiceImpl implements GreetingService {
-    public static final String HELLO_GURUS = "Hello Gurus!!!! - Original";
-    
+@Primary
+public class PrimaryGreetingService implements GreetingService {
+
     @Override
     public String sayGreeting() {
-        return HELLO_GURUS;
+        return "Hello - Primary Greeting service";
     }
+    
 }
